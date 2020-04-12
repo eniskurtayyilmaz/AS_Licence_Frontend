@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "AS-Licence-WebUI-Angular"
+  "defaultProject": "AS-Licence-WebUI-Angular",
+  "cli": {
+    "analytics": false
+  }
 }
