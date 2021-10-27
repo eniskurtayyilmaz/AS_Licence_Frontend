@@ -35,6 +35,13 @@
                       </div>
                     </div>
                     <div class="form-group row">
+                      <label for="" class="col-sm-6 col-form-label">Download Adresi</label>
+                      <div class="col-sm-12">
+                        <input type="text" class="form-control" [(ngModel)]="software.softwareDownloadUrl"
+                          value="{{software.softwareDownloadUrl}}" [ngModelOptions]="{standalone: true}">
+                      </div>
+                    </div>
+                    <div class="form-group row">
                       <div class="col-sm-12">
                         <label for="" class="col-form-label">Yazılım Aktif?</label>&nbsp;
                         <input type="checkbox" class="form-control-input" [(ngModel)]="software.softwareIsActive"
