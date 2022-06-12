@@ -164,6 +164,9 @@
                     <div class="form-group row">
                       <label for="" class="col-sm-6 col-form-label">Lisans Bilgisayar Sayısı:</label>
                       <div class="col-sm-12">
+                        <input [(ngModel)]="subscription.subScriptionLicenceCount" class="form-control" type="number"
+                          [ngModelOptions]="{standalone: true}" value="{{subscription.subScriptionLicenceCount}}" />
+                        <!-- 
                         <select class="form-control" [(ngModel)]="subscription.subScriptionLicenceCount"
                           [ngModelOptions]="{standalone: true}">
                           <option [selected]="subscription.subScriptionLicenceCount == 1">1</option>
@@ -178,7 +181,7 @@
                           <option [selected]="subscription.subScriptionLicenceCount == 10">10</option>
                           <option [selected]="subscription.subScriptionLicenceCount == 11">11</option>
                           <option [selected]="subscription.subScriptionLicenceCount == 12">12</option>
-                        </select>
+                        </select> -->
                       </div>
                     </div>
 
