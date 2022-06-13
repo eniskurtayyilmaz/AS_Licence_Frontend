@@ -9,6 +9,8 @@ import { SubscriptionService } from '../_services/_subscription/subscription.ser
 import { Subscription } from '../_viewmodel/subscription/subscription';
 import { Software } from '../_viewmodel/software/software';
 import { SoftwareService } from '../_services/_software/software.service';
+import { CustomerComputerInfo } from '../_viewmodel/customerComputerInfo/customerComputerInfo';
+import { ComputerService } from '../_services/_computer/computer.service';
 
 @Component({
   selector: 'app-customer-detail',
@@ -20,10 +22,12 @@ export class CustomerDetailComponent implements OnInit {
   FormSpinnerCustomer: boolean;
   FormSpinnerSubscription: boolean;
   FormSpinnerSubscriptionDetail: boolean;
+  FormSpinnerComputerDetail: boolean;
 
   constructor(
     private customerService: CustomerService,
     private subscriptionService: SubscriptionService,
+    private computerService: ComputerService,
     private softwareService: SoftwareService,
     private alertify: AlertifyService,
     private activatedRoute: ActivatedRoute,
@@ -31,11 +35,13 @@ export class CustomerDetailComponent implements OnInit {
     this.FormSpinnerCustomer = true;
     this.FormSpinnerSubscription = true;
     this.FormSpinnerSubscriptionDetail = true;
+    this.FormSpinnerComputerDetail = true;
   }
 
   customerId: number;
   customer: Customer = new Customer();
   subscriptionSummaries: SubscriptionSummary[] = [];
+  computers: CustomerComputerInfo[] = [];
   softwares: Software[] = [];
   subscription: Subscription = new Subscription();
 
@@ -45,6 +51,7 @@ export class CustomerDetailComponent implements OnInit {
       this.getSubscriptionSummaryListByCustomerId();
       this.getSoftwareLists();
       this.FormSpinnerSubscriptionDetail = false;
+      this.FormSpinnerComputerDetail = false;
     });
   }
   getSoftwareLists() {
@@ -110,6 +117,32 @@ export class CustomerDetailComponent implements OnInit {
     let goodDate: Date = new Date(years + "/" + months + "/" + days);
     goodDate.setDate(goodDate.getDate() + 1);
     return goodDate.toISOString().substring(0, 10);
+  }
+
+  softwareName: string = '';
+  getComputers(subscriptionId: number, softwareName: string) {
+    this.softwareName = softwareName;
+    if (subscriptionId > 0) {
+
+      this.computerService.GetCustomerComputerInfoListsBySubscriptionId(subscriptionId).subscribe(next => {
+        // alert('login ok');
+        debugger;
+        this.computers = next.data;
+
+
+        document.getElementById('toggle-computer-detail').click();
+        this.FormSpinnerComputerDetail = false;
+      }, error => {
+        this.alertify.error(error);
+        this.FormSpinnerComputerDetail = false;
+      }, () => {
+        this.FormSpinnerComputerDetail = false;
+      });
+    } else {
+      // this.clearSubscription();
+      this.FormSpinnerComputerDetail = false;
+      document.getElementById('toggle-computer-detail').click();
+    }
   }
 
   getSubscription(subscriptionId: number) {
