@@ -5,27 +5,50 @@
       <div class="col-lg-12">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#information">Müşteri Bilgileri</a>
+            <a class="nav-link active" data-toggle="tab" href="#information"
+              >Müşteri Bilgileri</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#subscription-list" id="toggle-subscription-list">Ürün
-              Bilgileri</a>
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              href="#subscription-list"
+              id="toggle-subscription-list"
+              >Ürün Bilgileri</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#subscription-detail" id="toggle-subscription-detail">Lisans
-              Bilgileri</a>
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              href="#subscription-detail"
+              id="toggle-subscription-detail"
+              >Lisans Bilgileri</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#computer-detail" id="toggle-computer-detail">Cihaz Bilgileri
-              Bilgileri</a>
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              href="#computer-detail"
+              id="toggle-computer-detail"
+              >Cihaz Bilgileri Bilgileri</a
+            >
           </li>
         </ul>
         <div id="myTabContent" class="tab-content">
           <div class="tab-pane fade active show" id="information">
             <div class="col-lg-6">
               <div class="my-3 p-3 bg-white rounded shadow-sm">
-                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                  <div class="spinner-border text-primary" role="status" [hidden]="!FormSpinnerCustomer">
+                <div
+                  class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"
+                >
+                  <div
+                    class="spinner-border text-primary"
+                    role="status"
+                    [hidden]="!FormSpinnerCustomer"
+                  >
                     <span class="sr-only">Loading...</span>
                   </div>
                 </div>
@@ -33,36 +56,64 @@
                   <fieldset>
                     <legend>Müşteri Bilgileri</legend>
                     <div class="form-group row">
-                      <label for="" class="col-sm-6 col-form-label">Adı - Ünvanı:</label>
+                      <label for="" class="col-sm-6 col-form-label"
+                        >Adı - Ünvanı:</label
+                      >
                       <div class="col-sm-12">
-                        <input type="text" class="form-control" [(ngModel)]="customer.customerName"
-                          value="{{customer.customerName}}" [ngModelOptions]="{standalone: true}">
+                        <input
+                          type="text"
+                          class="form-control"
+                          [(ngModel)]="customer.customerName"
+                          value="{{ customer.customerName }}"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="" class="col-sm-6 col-form-label">E-Posta Adresi:</label>
+                      <label for="" class="col-sm-6 col-form-label"
+                        >E-Posta Adresi:</label
+                      >
                       <div class="col-sm-12">
-                        <input type="text" class="form-control" [(ngModel)]="customer.customerEMail"
-                          value="{{customer.customerEMail}}" [ngModelOptions]="{standalone: true}">
+                        <input
+                          type="text"
+                          class="form-control"
+                          [(ngModel)]="customer.customerEMail"
+                          value="{{ customer.customerEMail }}"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="" class="col-sm-6 col-form-label">Telefon Numarası:</label>
+                      <label for="" class="col-sm-6 col-form-label"
+                        >Telefon Numarası:</label
+                      >
                       <div class="col-sm-12">
-                        <input type="text" class="form-control" [(ngModel)]="customer.customerPhone"
-                          value="{{customer.customerPhone}}" [ngModelOptions]="{standalone: true}">
+                        <input
+                          type="text"
+                          class="form-control"
+                          [(ngModel)]="customer.customerPhone"
+                          value="{{ customer.customerPhone }}"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
                       </div>
                     </div>
                     <div class="form-group row">
                       <div class="col-sm-12">
-                        <label for="" class="col-form-label">Kullanıcı Aktif?</label>&nbsp;
-                        <input type="checkbox" class="form-control-input" [(ngModel)]="customer.customerIsActive"
-                          value="" checked="{{customer.customerIsActive}}" [ngModelOptions]="{standalone: true}">
+                        <label for="" class="col-form-label"
+                          >Kullanıcı Aktif?</label
+                        >&nbsp;
+                        <input
+                          type="checkbox"
+                          class="form-control-input"
+                          [(ngModel)]="customer.customerIsActive"
+                          value=""
+                          checked="{{ customer.customerIsActive }}"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
                       </div>
-
-
                     </div>
-                    <button type="submit" class="btn btn-primary">Kaydet</button>&nbsp;
+                    <button type="submit" class="btn btn-primary">Kaydet</button
+                    >&nbsp;
                   </fieldset>
                 </form>
               </div>
@@ -71,15 +122,28 @@
           <div class="tab-pane fade" id="subscription-list">
             <div class="col-lg-12">
               <div class="my-3 p-3 bg-white rounded shadow-sm">
-                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                  <div class="spinner-border text-primary" role="status" [hidden]="!FormSpinnerCustomer">
+                <div
+                  class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"
+                >
+                  <div
+                    class="spinner-border text-primary"
+                    role="status"
+                    [hidden]="!FormSpinnerCustomer"
+                  >
                     <span class="sr-only">Loading...</span>
                   </div>
                 </div>
                 <form>
                   <fieldset>
-                    <legend>Ürün Bilgileri <button class="btn btn-outline-success my-2 my-sm-0"
-                        (click)="getSubscription(0)">Yeni Ekle</button></legend>
+                    <legend>
+                      Ürün Bilgileri
+                      <button
+                        class="btn btn-outline-success my-2 my-sm-0"
+                        (click)="getSubscription(0)"
+                      >
+                        Yeni Ekle
+                      </button>
+                    </legend>
                     <table class="table table-hover">
                       <thead>
                         <tr>
@@ -93,25 +157,86 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr class="table-danger" *ngIf="subscriptionSummaries.length === 0">
-                          <td colspan="7"><a (click)="getSubscription(0)">Müşteriye ait hiçbir lisans eklenmemiş. Yeni
-                              bir lisans eklemek için tıklayınız</a>
+                        <tr
+                          class="table-danger"
+                          *ngIf="subscriptionSummaries.length === 0"
+                        >
+                          <td colspan="7">
+                            <a (click)="getSubscription(0)"
+                              >Müşteriye ait hiçbir lisans eklenmemiş. Yeni bir
+                              lisans eklemek için tıklayınız</a
+                            >
                           </td>
                         </tr>
-                        <tr class="table" *ngFor="let subscriptionSummary of subscriptionSummaries">
-                          <td>{{subscriptionSummary.softwareName}}</td>
-                          <td>{{subscriptionSummary.subscriptionIsActive ? 'Aktif' : 'Pasif'}}</td>
-                          <td>{{subscriptionSummary.subScriptionStartDate | date:'dd-MM-yyyy'}}</td>
-                          <td>{{subscriptionSummary.subScriptionEndDate | date:'dd-MM-yyyy'}}</td>
-                          <td>{{subscriptionSummary.subScriptionLicenceCount}}</td>
-                          <td>{{subscriptionSummary.subScriptionCurrentLicenceCount}}</td>
+                        <tr
+                          class="table"
+                          *ngFor="
+                            let subscriptionSummary of subscriptionSummaries
+                          "
+                        >
+                          <td>{{ subscriptionSummary.softwareName }}</td>
                           <td>
-                            <button type="button" class="btn btn-info" (click)="getComputers(subscriptionSummary.subscriptionId,
-                              subscriptionSummary.softwareName)">Goruntule</button>
-                            <button type="button" class="btn btn-warning"
-                              (click)="getSubscription(subscriptionSummary.subscriptionId)">Düzelt</button><br />
-                            <button type="button" class="btn btn-secondary"
-                              (click)="deleteSubscription(subscriptionSummary.subscriptionId)">Sil</button>
+                            {{
+                              subscriptionSummary.subscriptionIsActive
+                                ? "Aktif"
+                                : "Pasif"
+                            }}
+                          </td>
+                          <td>
+                            {{
+                              subscriptionSummary.subScriptionStartDate
+                                | date : "dd-MM-yyyy"
+                            }}
+                          </td>
+                          <td>
+                            {{
+                              subscriptionSummary.subScriptionEndDate
+                                | date : "dd-MM-yyyy"
+                            }}
+                          </td>
+                          <td>
+                            {{ subscriptionSummary.subScriptionLicenceCount }}
+                          </td>
+                          <td>
+                            {{
+                              subscriptionSummary.subScriptionCurrentLicenceCount
+                            }}
+                          </td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn btn-info"
+                              (click)="
+                                getComputers(
+                                  subscriptionSummary.subscriptionId,
+                                  subscriptionSummary.softwareName
+                                )
+                              "
+                            >
+                              Goruntule
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-warning"
+                              (click)="
+                                getSubscription(
+                                  subscriptionSummary.subscriptionId
+                                )
+                              "
+                            >
+                              Düzelt</button
+                            ><br />
+                            <button
+                              type="button"
+                              class="btn btn-secondary"
+                              (click)="
+                                deleteSubscription(
+                                  subscriptionSummary.subscriptionId
+                                )
+                              "
+                            >
+                              Sil
+                            </button>
                           </td>
                         </tr>
                       </tbody>
@@ -124,56 +249,105 @@
           <div class="tab-pane fade" id="subscription-detail">
             <div class="col-lg-6">
               <div class="my-3 p-3 bg-white rounded shadow-sm">
-                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                  <div class="spinner-border text-primary" role="status" [hidden]="!FormSpinnerSubscriptionDetail">
+                <div
+                  class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"
+                >
+                  <div
+                    class="spinner-border text-primary"
+                    role="status"
+                    [hidden]="!FormSpinnerSubscriptionDetail"
+                  >
                     <span class="sr-only">Loading...</span>
                   </div>
                 </div>
-                <form #FormSubscriptionDetail="ngForm" (ngSubmit)="saveSubscription()">
+                <form
+                  #FormSubscriptionDetail="ngForm"
+                  (ngSubmit)="saveSubscription()"
+                >
                   <fieldset>
                     <legend>Lisans Bilgileri</legend>
                     <div class="form-group row">
-                      <label for="" class="col-sm-6 col-form-label">Adı - Ünvanı:</label>
+                      <label for="" class="col-sm-6 col-form-label"
+                        >Adı - Ünvanı:</label
+                      >
                       <div class="col-sm-12">
-                        <input type="text" class="form-control" [(ngModel)]="customer.customerName"
-                          value="{{customer.customerName}}" [ngModelOptions]="{standalone: true}" readonly=true>
+                        <input
+                          type="text"
+                          class="form-control"
+                          [(ngModel)]="customer.customerName"
+                          value="{{ customer.customerName }}"
+                          [ngModelOptions]="{ standalone: true }"
+                          readonly="true"
+                        />
                       </div>
                     </div>
 
                     <div class="form-group row">
-                      <label for="" class="col-sm-6 col-form-label">Yazılım Bilgisi:</label>
+                      <label for="" class="col-sm-6 col-form-label"
+                        >Yazılım Bilgisi:</label
+                      >
                       <div class="col-sm-12">
-                        <select class="custom-select" [(ngModel)]="subscription.softwareId"
-                          [ngModelOptions]="{standalone: true}">
+                        <select
+                          class="custom-select"
+                          [(ngModel)]="subscription.softwareId"
+                          [ngModelOptions]="{ standalone: true }"
+                        >
                           <option value="0">Yazılım bilgisi seçiniz.</option>
-                          <option *ngFor="let software of softwares" [value]="software.softwareId"
-                            [selected]="subscription.softwareId == software.softwareId">
-                            {{software.softwareName}}</option>
+                          <option
+                            *ngFor="let software of softwares"
+                            [value]="software.softwareId"
+                            [selected]="
+                              subscription.softwareId == software.softwareId
+                            "
+                          >
+                            {{ software.softwareName }}
+                          </option>
                         </select>
                       </div>
                     </div>
 
                     <div class="form-group row">
-                      <label for="" class="col-sm-6 col-form-label">Lisans Başlangıç Tarihi:</label>
+                      <label for="" class="col-sm-6 col-form-label"
+                        >Lisans Başlangıç Tarihi:</label
+                      >
                       <div class="col-sm-12">
-                        <input [(ngModel)]="subscription.subScriptionStartDate" class="form-control" type="date"
-                          [ngModelOptions]="{standalone: true}" value="{{subscription.subScriptionStartDate}}" />
+                        <input
+                          [(ngModel)]="subscription.subScriptionStartDate"
+                          class="form-control"
+                          type="date"
+                          [ngModelOptions]="{ standalone: true }"
+                          value="{{ subscription.subScriptionStartDate }}"
+                        />
                       </div>
                     </div>
 
                     <div class="form-group row">
-                      <label for="" class="col-sm-6 col-form-label">Lisans Bitiş Tarihi:</label>
+                      <label for="" class="col-sm-6 col-form-label"
+                        >Lisans Bitiş Tarihi:</label
+                      >
                       <div class="col-sm-12">
-                        <input [(ngModel)]="subscription.subScriptionEndDate" class="form-control" type="date"
-                          [ngModelOptions]="{standalone: true}" value="{{subscription.subScriptionEndDate}}" />
+                        <input
+                          [(ngModel)]="subscription.subScriptionEndDate"
+                          class="form-control"
+                          type="date"
+                          [ngModelOptions]="{ standalone: true }"
+                          value="{{ subscription.subScriptionEndDate }}"
+                        />
                       </div>
                     </div>
 
                     <div class="form-group row">
-                      <label for="" class="col-sm-6 col-form-label">Lisans Bilgisayar Sayısı:</label>
+                      <label for="" class="col-sm-6 col-form-label"
+                        >Lisans Bilgisayar Sayısı:</label
+                      >
                       <div class="col-sm-12">
-                        <input [(ngModel)]="subscription.subScriptionLicenceCount" class="form-control" type="number"
-                          [ngModelOptions]="{standalone: true}" value="{{subscription.subScriptionLicenceCount}}" />
+                        <input
+                          [(ngModel)]="subscription.subScriptionLicenceCount"
+                          class="form-control"
+                          type="number"
+                          [ngModelOptions]="{ standalone: true }"
+                          value="{{ subscription.subScriptionLicenceCount }}"
+                        />
                         <!-- 
                         <select class="form-control" [(ngModel)]="subscription.subScriptionLicenceCount"
                           [ngModelOptions]="{standalone: true}">
@@ -195,15 +369,21 @@
 
                     <div class="form-group row">
                       <div class="col-sm-12">
-                        <label for="" class="col-form-label">Lisans Aktif?</label>&nbsp;
-                        <input type="checkbox" class="form-control-input"
-                          [(ngModel)]="subscription.subscriptionIsActive" value=""
-                          checked="{{subscription.subscriptionIsActive}}" [ngModelOptions]="{standalone: true}">
+                        <label for="" class="col-form-label"
+                          >Lisans Aktif?</label
+                        >&nbsp;
+                        <input
+                          type="checkbox"
+                          class="form-control-input"
+                          [(ngModel)]="subscription.subscriptionIsActive"
+                          value=""
+                          checked="{{ subscription.subscriptionIsActive }}"
+                          [ngModelOptions]="{ standalone: true }"
+                        />
                       </div>
-
-
                     </div>
-                    <button type="submit" class="btn btn-primary">Kaydet</button>&nbsp;
+                    <button type="submit" class="btn btn-primary">Kaydet</button
+                    >&nbsp;
                   </fieldset>
                 </form>
               </div>
@@ -212,18 +392,25 @@
           <div class="tab-pane fade" id="computer-detail">
             <div class="col-lg-12">
               <div class="my-3 p-3 bg-white rounded shadow-sm">
-                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                  <div class="spinner-border text-primary" role="status" [hidden]="!FormSpinnerComputerDetail">
+                <div
+                  class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray"
+                >
+                  <div
+                    class="spinner-border text-primary"
+                    role="status"
+                    [hidden]="!FormSpinnerComputerDetail"
+                  >
                     <span class="sr-only">Loading...</span>
                   </div>
                 </div>
                 <form>
                   <fieldset>
-                    <legend>{{softwareName}}</legend>
+                    <legend>{{ softwareName }}</legend>
                     <table class="table table-hover">
                       <thead>
                         <tr>
                           <th scope="col">Yazılım Adı</th>
+                          <th scope="col">Bilgisayar Etiketi</th>
                           <th scope="col">HDD</th>
                           <th scope="col">MAC</th>
                           <th scope="col">İŞLEMCİ</th>
@@ -232,14 +419,28 @@
                       </thead>
                       <tbody>
                         <tr class="table-danger" *ngIf="computers.length === 0">
-                          <td colspan="7">Bu aboneliğe ait daha kayıtlı bir cihaz bulunamadı.</td>
+                          <td colspan="7">
+                            Bu aboneliğe ait daha kayıtlı bir cihaz bulunamadı.
+                          </td>
                         </tr>
                         <tr class="table" *ngFor="let computer of computers">
-                          <td>{{softwareName}}</td>
-                          <td>{{computer.customerComputerInfoHddSerialCode}}</td>
-                          <td>{{computer.customerComputerInfoMacSerialCode}}</td>
-                          <td>{{computer.customerComputerInfoProcessSerialCode}}</td>
-                          <td>{{computer.createdDateTime | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+                          <td>{{ softwareName }}</td>
+                          <td>{{ computer.computerTagName }}</td>
+                          <td>
+                            {{ computer.customerComputerInfoHddSerialCode }}
+                          </td>
+                          <td>
+                            {{ computer.customerComputerInfoMacSerialCode }}
+                          </td>
+                          <td>
+                            {{ computer.customerComputerInfoProcessSerialCode }}
+                          </td>
+                          <td>
+                            {{
+                              computer.createdDateTime
+                                | date : "dd-MM-yyyy HH:mm:ss"
+                            }}
+                          </td>
                           <!-- <td>
                             <button type="button" class="btn btn-info" (click)="getComputers(subscriptionSummary.subscriptionId,
                               subscriptionSummary.softwareName)">Goruntule</button>
