@@ -1,9 +1,10 @@
 export class CustomerComputerInfo {
-    customerComputerInfoId: number;
-    subscriptionId: number;
-    customerComputerInfoHddSerialCode: string;
-    customerComputerInfoMacSerialCode: string;
-    customerComputerInfoProcessSerialCode: string;
-    createdDateTime?: string;
-    updatedDateTime?: string;
+  customerComputerInfoId: number;
+  computerTagName: string;
+  subscriptionId: number;
+  customerComputerInfoHddSerialCode: string;
+  customerComputerInfoMacSerialCode: string;
+  customerComputerInfoProcessSerialCode: string;
+  createdDateTime?: string;
+  updatedDateTime?: string;
 }
